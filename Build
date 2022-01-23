@@ -8,7 +8,7 @@ ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
 ImageLabel.BackgroundTransparency = 1
 ImageLabel.Position = UDim2.new(0.5, -(303 / 2), 0.5, -(263 / 2))
 ImageLabel.Rotation = 0
-ImageLabel.Size = UDim2.new(0, 300, 0, 300)
+ImageLabel.Size = UDim2.new(0, 303, 0, 263)
 ImageLabel.Image = "rbxassetid://8625948612"
 ImageLabel.ImageTransparency = 1
 
@@ -73,15 +73,15 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/1201f
 local Window = Library:CreateWindow(Config, game:GetService("CoreGui"))
 
 local Tab1 = Window:CreateTab("Build a Boat")
-local Tab2 = Window:CreateTab("UI Ayarları")
+local Tab2 = Window:CreateTab("UI Settings")
 
-local Section1 = Tab1:CreateSection("Autofarm")
-local Section2 = Tab1:CreateSection("Çeşitli")
-local SectionA = Tab1:CreateSection("Işınlanma")
-local Section3 = Tab2:CreateSection("Menü")
-local Section4 = Tab2:CreateSection("Arkaplan")
+local Section1 = Tab1:CreateSection("AutoFarms")
+local Section2 = Tab1:CreateSection("Misc")
+local SectionA = Tab1:CreateSection("Teleports")
+local Section3 = Tab2:CreateSection("Menu")
+local Section4 = Tab2:CreateSection("Background")
 
-local Toggle1 = Section1:CreateToggle("Autofarm", nil, function(State)
+local Toggle1 = Section1:CreateToggle("AutoFarm", nil, function(State)
 getgenv().Autofarm = State
 game:GetService("RunService").Stepped:connect(
     function()
@@ -460,9 +460,9 @@ Toggle3:CreateKeybind(tostring(Config.Keybind):gsub("Enum.KeyCode.", ""), functi
 	Config.Keybind = Enum.KeyCode[Key]
 end)
 Toggle3:SetState(true)
-Section3:CreateLabel("Credits DekuDimz#7960")
-Section3:CreateLabel("Credits AlexR32#3232 Ui")
-Section3:CreateLabel("Credits Hazed")
+Section3:CreateLabel("Credits ShiDdos")
+Section3:CreateLabel("Credits Klortex")
+Section3:CreateLabel("Credits ExtuAxis")
 local Colorpicker3 = Section3:CreateColorpicker("UI Color", function(Color)
 	Window:ChangeColor(Color)
 end)
@@ -520,6 +520,6 @@ game.StarterGui:SetCore(
     "SendNotification",
     {
         Title = "Credis",
-        Text = "ShiDdos & Klortex & Extuaxis"
+        Text = "ShiDdos & Klortex"
     }
 )
