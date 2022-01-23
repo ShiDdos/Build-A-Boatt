@@ -462,7 +462,7 @@ end)
 Toggle3:SetState(true)
 Section3:CreateLabel("Credits ShiDdos")
 Section3:CreateLabel("Credits Klortex")
-Section3:CreateLabel("Credits ExtuAxis")
+Section3:CreateLabel("Credits Extuaxis")
 local Colorpicker3 = Section3:CreateColorpicker("UI Color", function(Color)
 	Window:ChangeColor(Color)
 end)
@@ -520,6 +520,6 @@ game.StarterGui:SetCore(
     "SendNotification",
     {
         Title = "Credis",
-        Text = "ShiDdos & Klortex"
+        Text = "ShiDdos & Klortex & Extuaxis"
     }
 )
